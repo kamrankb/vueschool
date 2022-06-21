@@ -33,7 +33,7 @@ export default {
         
         this.initData();
 
-        this.$watch(() => this.$route.params, this.initData);
+        //this.$watch(() => this.$route.params, this.initData);
     }
 }
 </script>
