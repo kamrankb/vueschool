@@ -18,7 +18,7 @@
 import sourceData from '@/data.json'
 
 export default {
-    data() {
+    setup() {
         return {
             destinations: sourceData.destinations
         }
