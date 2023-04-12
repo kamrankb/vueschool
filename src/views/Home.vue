@@ -3,7 +3,7 @@
         <h1>All Destinations</h1>
         <div class="destinations">
             <router-link
-                v-for="destination in destinations"
+                v-for="destination in destination.destinations"
                 :key="destination.id"
                 :to="{name: 'destination.show', params: {id: destination.id, slug: destination.slug}}"
             >
@@ -14,14 +14,9 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import sourceData from '@/data.json'
+import { ref } from 'vue'
 
-export default {
-    setup() {
-        return {
-            destinations: sourceData.destinations
-        }
-    }
-}
+const destination = ref({'destinations': sourceData.destinations})
 </script>
